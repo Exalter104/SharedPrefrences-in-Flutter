@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sharedprefrences/homescreen.dart';
 
-import 'sharedprefrences.dart';
+import 'splashscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,11 +27,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      initialRoute: SharedPrefrences.id,
-      routes: {
-        SharedPrefrences.id: (context) => const SharedPrefrences(),
-        HomeScreen.id: (context) => const HomeScreen(),
-      },
+      home: const SharedPrefrences(),
     );
   }
 }
